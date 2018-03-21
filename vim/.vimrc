@@ -61,6 +61,9 @@ Plug 'vim-airline/vim-airline-themes'
 " syntax highlighting
 Plug 'octol/vim-cpp-enhanced-highlight'
 
+" Table Mode
+Plug 'dhruvasagar/vim-table-mode'
+
 call plug#end()
 
 " CONFIG
