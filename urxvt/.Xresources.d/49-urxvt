@@ -1,36 +1,36 @@
-URxvt.underlineURLs:    true
-URxvt.keysym.M-u:       perl:mark-yank-urls:activate_mark_mode
+URxvt*.underlineURLs:    true
+URxvt*.keysym.M-u:       perl:mark-yank-urls:activate_mark_mode
 
-URxvt.cutchars:         `"()'*<>[]{|}"
- 
-URxvt.geometry:         100x45
-URxvt.borderLess:       false
-URxvt.transparent:      true
-URxvt.depth:            32
-!!URxvt.background:       rgba:0000/0000/0000/cccc
-!!URxvt.foreground:       white
+URxvt*.cutchars:         `"()'*<>[]{|}"
 
-URxvt.saveLines:        10000
-URxvt.xftAntialias:     true
-URxvt.font:             xft:inconsolata-g:pixelsize=15:antialias=true:hinting=true, xft:dejavu sans mono:pixelsize=15:antialias=true,hinting=true
-URxvt.boldFont:         xft:inconsolata-g:pixelsize=15:antialias=true:hinting=true, xft:dejavu sans mono:pixelsize=15:antialias=true,hinting=true
-URxvt.italicFont:       xft:inconsolata-g:pixelsize=15:antialias=true:hinting=true, xft:dejavu sans mono:pixelsize=15:antialias=true,hinting=true
-URxvt.bolditalicFont:   xft:inconsolata-g:pixelsize=15:antialias=true:hinting=true, xft:dejavu sans mono:pixelsize=15:antialias=true,hinting=true
+URxvt*.geometry:         100x45
+URxvt*.borderLess:       false
+URxvt*.transparent:      true
+URxvt*.depth:            32
+!!URxvt*.background:       rgba:0000/0000/0000/cccc
+!!URxvt*.foreground:       white
 
-URxvt.intensityStyles:	false
-URxvt.internalBorder:   1
-URxvt.underlineColor:	#999999
-URxvt.cursorBlink:      true
-URxvt.cursorColor:      #850A0C
-URxvt.cursorColor2:     #000000
+URxvt*.saveLines:        10000
+URxvt*.xftAntialias:     true
+URxvt*.font:             xft:inconsolata-g:pixelsize=15:antialias=true:hinting=true, xft:dejavu sans mono:pixelsize=15:antialias=true,hinting=true
+URxvt*.boldFont:         xft:inconsolata-g:pixelsize=15:antialias=true:hinting=true, xft:dejavu sans mono:pixelsize=15:antialias=true,hinting=true
+URxvt*.italicFont:       xft:inconsolata-g:pixelsize=15:antialias=true:hinting=true, xft:dejavu sans mono:pixelsize=15:antialias=true,hinting=true
+URxvt*.bolditalicFont:   xft:inconsolata-g:pixelsize=15:antialias=true:hinting=true, xft:dejavu sans mono:pixelsize=15:antialias=true,hinting=true
 
-URxvt.scrollBar:        False
-URxvt.scrollBar_right:  False
- 
-URxvt.scrollTtyOutput:  False
-URxvt.scrollWithBuffer: True
-URxvt.scrollTtyKeypress: True
-URxvt.urgentOnBell:	True
+URxvt*.intensityStyles:	false
+URxvt*.internalBorder:   1
+URxvt*.underlineColor:	#999999
+URxvt*.cursorBlink:      true
+URxvt*.cursorColor:      #850A0C
+URxvt*.cursorColor2:     #000000
 
-URxvt.tintColor: 15
+URxvt*.scrollBar:        False
+URxvt*.scrollBar_right:  False
+
+URxvt*.scrollTtyOutput:  False
+URxvt*.scrollWithBuffer: True
+URxvt*.scrollTtyKeypress: True
+URxvt*.urgentOnBell:	True
+
+URxvt*.tintColor: 15
 
