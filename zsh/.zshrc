@@ -10,7 +10,7 @@ ZSH_THEME="af-magic"
 
 autoload -U zmv
 
-plugins=( colored-man-pages cp gas git gitignore gnu-utils man mosh nmap perl python rsync rsync ssh-agent ssh-agent sudo systemd tmux virtualenv )
+plugins=( colored-man-pages cp gas git gitignore gitfast git-extrasgnu-utils man mosh nmap perl python rsync rsync ssh-agent ssh-agent sudo systemd tmux virtualenv cabal catimg compleat docker last-working-dir taskwarrior)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.alias-tips/alias-tips.plugin.zsh
