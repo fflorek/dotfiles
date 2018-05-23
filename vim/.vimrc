@@ -21,10 +21,10 @@ Plug 'tpope/vim-sensible'
 " Autodetect indentation
 Plug 'tpope/vim-sleuth'
 
-"Plug 'altercation/vim-colors-solarized'
+Plug 'altercation/vim-colors-solarized'
 Plug 'bronson/vim-trailing-whitespace'
 
-Plug 'lifepillar/vim-solarized8'
+"Plug 'lifepillar/vim-solarized8'
 
 " current word highlighting
 Plug 'ihacklog/HiCursorWords'
@@ -55,8 +55,8 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do' : './install --all' }
 Plug 'junegunn/fzf.vim'
 
 " airline
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
 
 " syntax highlighting
 Plug 'octol/vim-cpp-enhanced-highlight'
@@ -64,25 +64,48 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 " Table Mode
 Plug 'dhruvasagar/vim-table-mode'
 
+" Tagbar
+Plug 'majutsushi/tagbar'
+
+" deoplete (completion)
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+let g:deoplete#enable_at_startup=1
+
 call plug#end()
+
 
 " CONFIG
 
+let mapleader = "\<Space>"
+
 " fzf default keybindings
-nmap <leader><tab> <plug>(fzf-maps-n)
-xmap <leader><tab> <plug>(fzf-maps-x)
-omap <leader><tab> <plug>(fzf-maps-o)
+nmap <Leader><tab> <plug>(fzf-maps-n)
+xmap <Leader><tab> <plug>(fzf-maps-x)
+omap <Leader><tab> <plug>(fzf-maps-o)
 
 nnoremap <silent> <C-P> :Files<CR>
 
+
+" Tagbar config
+nmap <Leader>t :TagbarToggle<CR>
+
+let g:tagbar_show_linenumbers=-1
+
+autocmd FileType  * nested :call tagbar#autoopen(0)
 
 let g:minimap_toggle='<leader>mm'
 
 " Set colours to grayvim or fallback to installed theme
 set background=dark
-set t_Co=256
+"set t_Co=256
 
-colorscheme solarized8_dark
+colorscheme solarized
 
 highlight ColorColumn ctermbg=magenta "set to whatever you like
 call matchadd('ColorColumn', '\%81v', 100) "set column nr
@@ -148,7 +171,6 @@ if has("persistent_undo")
 	set undofile
 endif
 
-let mapleader = "\<Space>"
 
 " sudo write
 cmap w!! %!sudo tee > /dev/null %
@@ -184,6 +206,7 @@ nnoremap <Leader>p :<C-U>call FBufferPrevious(v:count)<CR>
 nnoremap <C-k> :<C-U>call FBufferNext(v:count)<CR>
 nnoremap <C-j> :<C-U>call FBufferPrevious(v:count)<CR>
 
+" allow buffers to be hidden even if they contain changes
 set hidden
 set wildmenu
 set wildmode=list:longest,full
@@ -201,15 +224,10 @@ nnoremap <leader>so :so<Space>~/.vimrc<CR>
 " Toggle undotree view
 nnoremap <Leader>u :UndotreeToggle<CR>
 
-" Disable arrow keys
-inoremap  <Up>     <NOP>
-inoremap  <Down>   <NOP>
-inoremap  <Left>   <NOP>
-inoremap  <Right>  <NOP>
-noremap   <Up>     <NOP>
-noremap   <Down>   <NOP>
-noremap   <Left>   <NOP>
-noremap   <Right>  <NOP>
+nnoremap <Up>		:resize +2<CR>
+nnoremap <Down>		:resize -2<CR>
+nnoremap <Left>		:vertical resize +2<CR>
+nnoremap <Right>	:vertical resize -2<CR>
 
 "use latex for tex files
 let g:tex_flavor='latex'
